@@ -1,32 +1,31 @@
-import {isJwtExpired} from 'jwt-check-expiration';
-import jwt_decode from 'jwt-decode';
+import {isJwtExpired} from "jwt-check-expiration";
+import jwt_decode from "jwt-decode";
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = "http://localhost:3000";
 
 function getEndpoint(resource: string): string {
     return `${BASE_URL}/${resource}`
 }
 function getOpenWeatherApi() :string {
-    const apiKey =  "0aa7156867966223bb102e1bce696da2";
-    return apiKey;
+    return "0aa7156867966223bb102e1bce696da2";
 }
 
 function getHeader(): HeadersInit | undefined {
     if (checkToken()) {
         const result: HeadersInit = new Headers()
-        result.append('Content-Type', 'application/json')
-        result.append('Authorization', `Bearer ${localStorage.getItem("token")}`)
+        result.append("Content-Type", "application/json")
+        result.append("Authorization", `Bearer ${localStorage.getItem("token")}`)
         return result;
     }
 
-    localStorage.removeItem('token')
+    localStorage.removeItem("token")
     window.history.pushState({}, "App", "/");
     window.location.reload();
     return;
 }
 
 function checkToken(): boolean {
-    const storedToken = localStorage.getItem('token')
+    const storedToken = localStorage.getItem("token")
     if (storedToken) {
         return !isJwtExpired(storedToken);
     }
@@ -42,9 +41,9 @@ function getDecodedAccessToken(token: string): any {
 }
 
 function getToken(): string {
-    const savedToken = localStorage.getItem('token');
+    const savedToken = localStorage.getItem("token");
     if (!savedToken) {
-        return '';
+        return "";
     }
     return savedToken;
 }

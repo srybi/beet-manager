@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import {Card, CardContent, CardMedia, Container, Typography} from "@mui/material";
+import React, {useEffect, useState} from "react"
+import {Card, CardContent, Container, Typography} from "@mui/material";
 import {apiService} from "../../Util/ApiService";
 import {WeatherDataResponse} from "./WeatherDataResponse";
 
@@ -29,7 +29,7 @@ function WeatherData ({state} : Props) {
     if(apiData){
         return(
 
-            <Container style={{display: 'flex', justifyContent: 'center'}}>
+            <Container style={{display: "flex", justifyContent: "center"}}>
 
                 <Card sx={{ minWidth: 275 }}>
                     <img

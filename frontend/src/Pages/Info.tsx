@@ -8,7 +8,7 @@ import WeatherData from "./WeatherData/WeatherData";
 
 function Info(){
 
-    const [state, setState] = useState('');
+    const [state, setState] = useState("");
     const [isActive, setIsActive] = useState(false)
 
      const inputHandler = (event: { target: { value: React.SetStateAction<string>; }; }) => {

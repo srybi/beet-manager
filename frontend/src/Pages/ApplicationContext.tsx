@@ -16,13 +16,13 @@ export const BedContext = createContext<[ Planting[] , Dispatch<SetStateAction<P
 }]);
 
 export const BedErrorContext = createContext<[ string, Dispatch<SetStateAction<string>>]>
-(['', () => {
+(["", () => {
 }]);
 
 function ApplicationContext(props: ContextProps){
     const [plantList, setPlants] = useState<Plant[]>([])
     const [bedFields, setBed] = useState<Planting[]>([])
-    const [bedError, setBedError] = useState<string>('')
+    const [bedError, setBedError] = useState<string>("")
 
     return(
         <>

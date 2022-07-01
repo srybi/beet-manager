@@ -4,7 +4,7 @@ import {PlantListContext} from "../Pages/ApplicationContext";
 import {apiService} from "../Util/ApiService";
 
 export async function getSuggestedPlants() : Promise<Plant[]>{
-    const GET_URL = apiService.getEndpoint('plants')
+    const GET_URL = apiService.getEndpoint("plants")
     const header = apiService.getHeader()
 
     const response = await fetch(GET_URL,{

@@ -5,7 +5,7 @@ import {apiService} from "../Util/ApiService";
 
 async function getAllPlantPositions() : Promise<Planting[]> {
     const existing : Planting[] = []
-    const GET_URL = apiService.getEndpoint('plants/positions')
+    const GET_URL = apiService.getEndpoint("plants/positions")
     const header = apiService.getHeader()
     const response = await fetch(GET_URL,{
         headers: header

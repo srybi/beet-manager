@@ -1,6 +1,6 @@
-import { ReactComponent as LogoSleep } from '../Icons/compostSleep.svg'
-import { ReactComponent as LogoWorking } from '../Icons/compostWorking.svg'
-import './Compost.css'
+import { ReactComponent as LogoSleep } from "../Icons/compostSleep.svg"
+import { ReactComponent as LogoWorking } from "../Icons/compostWorking.svg"
+import "./Compost.css"
 import useCompost from "./useCompost";
 
 function Compost(){

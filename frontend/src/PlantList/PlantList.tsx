@@ -1,5 +1,5 @@
 import PlantListItem from "./PlantListItem";
-import './PlantList.css';
+import "./PlantList.css";
 import usePlantList from "./usePlantList";
 
 
@@ -9,7 +9,7 @@ function PlantList(){
 
     return (
         <div className = "plantList">
-            <ul className='plantUl'>
+            <ul className="plantUl">
                 {plantList.map((plant) => {
                     return (
                         <PlantListItem plant={plant} key={plant.id}/>

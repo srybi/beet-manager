@@ -1,12 +1,12 @@
-import './App.css';
+import "./App.css";
 import * as React from "react";
 import {Navigate} from "react-router";
 import {createContext, Dispatch, SetStateAction, useState} from "react";
 
 function checkToken() : string {
-    const savedToken = localStorage.getItem('token');
+    const savedToken = localStorage.getItem("token");
     if(!savedToken){
-        return '';
+        return "";
     }
     return savedToken;
 }
@@ -20,12 +20,12 @@ function App() {
     if(!token){
         return(
             <TokenContext.Provider value={[token, setToken]}>
-                <Navigate to={'login'} replace={true}/>
+                <Navigate to={"login"} replace={true}/>
             </TokenContext.Provider>
         );
     }else{
         return(
-            <Navigate to={'home'} replace={true}/>
+            <Navigate to={"home"} replace={true}/>
         );
     }
 }

@@ -1,10 +1,8 @@
 
-import Planting from './Planting'
-import './Bed.css'
+import Planting from "./Planting"
+import "./Bed.css"
 import useBedField from "./useBedField";
 import Icons from "../Icons/Icons";
-import Plant from "../PlantList/Plant";
-import usePlantList from "../PlantList/usePlantList";
 
 
 type Props = {

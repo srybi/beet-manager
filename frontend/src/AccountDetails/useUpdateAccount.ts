@@ -13,16 +13,15 @@ type update = {
 async function updateUser(passwordd: string, newPassword: string): Promise<Response> {
     const token = apiService.getToken();
     const tokenInfo = apiService.getDecodedAccessToken(token);
-    const URL = apiService.getEndpoint('users/users/' + tokenInfo.payload.id);
+    const URL = apiService.getEndpoint("users/users/" + tokenInfo.payload.id);
     const header = apiService.getHeader();
     const body = `{"password": "${passwordd}", "newPassword": "${newPassword}" }`
     const requestOptions = {
-        method: 'PUT',
+        method: "PUT",
         headers: header,
         body: body
     };
-    const response = await fetch(URL, requestOptions);
-    return response;
+    return await fetch(URL, requestOptions);
 }
 
 function validate(information: update): Map<string, string> {
@@ -31,10 +30,10 @@ function validate(information: update): Map<string, string> {
         return resultMap
     }
     if (information.passwordd.length < 14 || information.passwordd.length > 100) {
-        resultMap.set('password', 'The password must be between 14 and 100 characters long.')
+        resultMap.set("password", "The password must be between 14 and 100 characters long.")
     }
     if (information.newPassword.length < 14 || information.passwordd.length > 100) {
-        resultMap.set('password', 'The password must be between 14 and 100 characters long.')
+        resultMap.set("password", "The password must be between 14 and 100 characters long.")
     }
     return resultMap;
 }
@@ -43,18 +42,18 @@ function hasValues(information: update): Map<string, string> {
     const resultMap = new Map<string, string>()
 
     if (information.passwordd.length === 0) {
-        resultMap.set('password', 'Password can not be empty')
+        resultMap.set("password", "Password can not be empty")
     }
     return resultMap;
 }
 
 function handleError(error: string): Map<string, string> {
     const resultMap = new Map<string, string>()
-    if (error.includes('passwordd')) {
-        resultMap.set('passwordd', error)
+    if (error.includes("passwordd")) {
+        resultMap.set("passwordd", error)
     }
-    if (error.includes('email')) {
-        resultMap.set('email', error)
+    if (error.includes("email")) {
+        resultMap.set("email", error)
     }
     return resultMap;
 }
@@ -73,8 +72,8 @@ function useUpdateAccount() {
         }
         const response = await updateUser(update.passwordd, update.newPassword)
         if (response.ok) {
-            localStorage.removeItem('token')
-            navigate('/login')
+            localStorage.removeItem("token")
+            navigate("/login")
 
         } else {
             const msg = await response.text();

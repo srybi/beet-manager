@@ -7,12 +7,12 @@ import {useNavigate} from "react-router";
 
 function Logout() {
 
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     const navigate = useNavigate();
 
     useEffect(() => {
         if (!apiService.checkToken()) {
-            navigate('/login');
+            navigate("/login");
         }
     }, [navigate]);
 

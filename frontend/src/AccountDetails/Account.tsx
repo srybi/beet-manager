@@ -22,7 +22,7 @@ function Account(): ReactElement {
     const isTokenValid = apiService.checkToken();
     useEffect(() => {
         if (!isTokenValid) {
-            navigate('/login');
+            navigate("/login");
             return;
         }
     }, [isTokenValid]);
@@ -36,7 +36,7 @@ function Account(): ReactElement {
             <Container className="p-5 mb-4 bg-light rounded-4">
                 <Header/>
             </Container>
-            <Container style={{display: 'flex', justifyContent: 'center'}}>
+            <Container style={{display: "flex", justifyContent: "center"}}>
                 <form onSubmit={event => updateU(event)}>
 
                     <Avatar sx={{
@@ -51,12 +51,12 @@ function Account(): ReactElement {
 
                     <div className="form-group">
 
-                        <Input label={'Current Password'} value={update.passwordd} onChange={handleChangeUpdate}
-                               name={'passwordd'}
-                               type={'password'} error={errorUpdate.get('passwordd')}/>
-                        <Input label={'New Password'} value={update.newPassword} onChange={handleChangeUpdate}
-                               name={'newPassword'}
-                               type={'password'} error={errorUpdate.get('newPassword')}/>
+                        <Input label={"Current Password"} value={update.passwordd} onChange={handleChangeUpdate}
+                               name={"passwordd"}
+                               type={"password"} error={errorUpdate.get("passwordd")}/>
+                        <Input label={"New Password"} value={update.newPassword} onChange={handleChangeUpdate}
+                               name={"newPassword"}
+                               type={"password"} error={errorUpdate.get("newPassword")}/>
                     </div>
                     <Button variant="contained" color="success" type="submit">
                         Change password
@@ -65,14 +65,14 @@ function Account(): ReactElement {
 
             </Container>
 
-            <Container style={{display: 'flex', justifyContent: 'center'}}>
+            <Container style={{display: "flex", justifyContent: "center"}}>
                 <form onSubmit={event => deleteUser(event)}>
 
                     <div className="form-group">
-                        <Input label={'Email'} value={user.email} onChange={handleChange} name={'email'}
-                               type={'text'} error={error.get('email')}/>
-                        <Input label={'Password'} value={user.password} onChange={handleChange} name={'password'}
-                               type={'password'} error={error.get('password')}/>
+                        <Input label={"Email"} value={user.email} onChange={handleChange} name={"email"}
+                               type={"text"} error={error.get("email")}/>
+                        <Input label={"Password"} value={user.password} onChange={handleChange} name={"password"}
+                               type={"password"} error={error.get("password")}/>
                     </div>
                     <Button variant="contained" color="error" type="submit">
                         Delete Account

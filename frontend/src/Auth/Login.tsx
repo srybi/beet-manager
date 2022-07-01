@@ -13,25 +13,25 @@ function Login(){
 
     useEffect(() => {
         if (apiService.checkToken()) {
-            navigate('/home');
+            navigate("/home");
         }
     }, []);
 
     return (
-        <Container style={{display: 'flex', justifyContent: 'center'}}>
+        <Container style={{display: "flex", justifyContent: "center"}}>
             <form className="login" onSubmit={event => doLogin(event)}>
                 <h3>Login</h3>
-                <Input label={'Username'} value={login.username} onChange={handleChange} name={'username'}
-                       type={'text'} error={errorMsg.get('username')}/>
-                <Input label={'Password'} value={login.password} onChange={handleChange} name={'password'}
-                       type={'password'} error={errorMsg.get('password')}/>
+                <Input label={"Username"} value={login.username} onChange={handleChange} name={"username"}
+                       type={"text"} error={errorMsg.get("username")}/>
+                <Input label={"Password"} value={login.password} onChange={handleChange} name={"password"}
+                       type={"password"} error={errorMsg.get("password")}/>
                 <br/>
                 <Stack direction="row" spacing={2}>
                 <Button variant="contained" size="small"  color="success" type="submit"  >login</Button>
 
                 <div>
                     New here?&nbsp;
-                    <Button variant='text' size='small' onClick={() => navigate('/register')}>Register</Button>
+                    <Button variant="text" size="small" onClick={() => navigate("/register")}>Register</Button>
                 </div>
 
                 </Stack>
