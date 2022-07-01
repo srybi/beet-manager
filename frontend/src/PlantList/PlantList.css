@@ -1,0 +1,36 @@
+.plantList {
+    background-color: #fffdfb;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px 10px 15px 15px;
+    -webkit-box-shadow: 2px 3px 1px 0 rgba(127,27,224,0.2);
+    box-shadow: 2px 3px 1px 0 rgba(127,27,224,0.2);
+}
+
+.plantUl {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.plantListButton {
+    height: 100px;
+    width: 100px;
+}
+.plantListButton:hover {
+    background-color: rgba(79, 136, 11, 0.1) !important;
+}
+
+.plantListItem {
+    background-color: transparent;
+    display: inline-block;
+    margin: 10px;
+    color: black;
+    line-height: 25px;
+    text-align: center;
+}
+
+.plantListItemChild {
+    margin: auto;
+    height: 50px;
+    width: 50px;
+}
