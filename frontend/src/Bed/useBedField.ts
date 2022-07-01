@@ -13,10 +13,10 @@ type Props = {
 }
 
 async function postPlanting(planting: Planting) {
-    const URL = apiService.getEndpoint('plants/positions')
+    const URL = apiService.getEndpoint("plants/positions")
     const header = apiService.getHeader()
     const requestOptions = {
-        method: 'POST',
+        method: "POST",
         headers: header,
         body: JSON.stringify(planting)
     };
@@ -51,7 +51,7 @@ async function updatePlanting(planting: Planting) {
     const URL = apiService.getEndpoint(`plants/positions/${planting.id}`)
     const header = apiService.getHeader()
     const requestOptions = {
-        method: 'PUT',
+        method: "PUT",
         headers: header,
         body: JSON.stringify({x_pos: planting.x_pos, y_pos: planting.y_pos})
     };

@@ -1,5 +1,5 @@
 import BedField from "./BedField"
-import './Bed.css'
+import "./Bed.css"
 import useBed, {getBedHeight, getBedWidth} from "./useBed"
 import * as React from "react";
 

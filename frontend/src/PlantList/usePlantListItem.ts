@@ -4,19 +4,19 @@ import Plant from "./Plant";
 
 function getColorFromHarmony(harmony : number) : string {
     if(harmony === 1){
-        return '#b3ef88';
+        return "#b3ef88";
     }
     else if(harmony === 0){
-        return '#f8f4ca';
+        return "#f8f4ca";
     }
     else{
-        return '#d9cec5';
+        return "#d9cec5";
     }
 }
 
 function getTextDecorationFromHarmony(harmony: number) : string {
     if (harmony >= 0) {
-        return '';
+        return "";
     }
     return "line-through #000";
 }

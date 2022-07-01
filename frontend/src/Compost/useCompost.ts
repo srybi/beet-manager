@@ -12,7 +12,7 @@ async function deletePosition(position : Planting){
     const header = apiService.getHeader()
 
     const requestOptions = {
-        method: 'DELETE',
+        method: "DELETE",
         headers: header,
         body: JSON.stringify({x_pos: position.x_pos, y_pos: position.y_pos})
     };

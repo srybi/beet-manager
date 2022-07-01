@@ -1,4 +1,4 @@
 export const ItemType = {
-    PLANT: 'plant',
-    POSITION: 'position'
+    PLANT: "plant",
+    POSITION: "position"
 }

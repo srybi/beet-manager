@@ -15,11 +15,11 @@
     display:table-cell; 
     width: 50px;
     height: 50px;
-    background-image: url( '../Icons/dust_texture.svg' );
+    background-image: url( "../Icons/dust_texture.svg" );
     border-color: darkolivegreen;
 } 
 
-.Bed .BedGrid .BedField[data-isempty='true']{ 
+.Bed .BedGrid .BedField[data-isempty="true"]{
     height: 50px;
     width: 50px;
     margin: 10px;
@@ -29,7 +29,7 @@
     text-align: center;
 } 
 
-.Bed .BedGrid .BedField[data-isover='true']{ 
+.Bed .BedGrid .BedField[data-isover="true"]{
     display:table-cell;
     width: 50px;
     height: 50px;

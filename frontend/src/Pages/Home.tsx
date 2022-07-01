@@ -5,7 +5,6 @@ import {themeTwo} from "../theme";
 import Header from "../PageElements/Header";
 import PlantList from "../PlantList/PlantList";
 import Bed from "../Bed/Bed";
-import {Footer} from "../PageElements/Footer";
 import * as React from "react";
 import {Container} from "@mui/material";
 import ApplicationContext from "./ApplicationContext";
@@ -20,7 +19,7 @@ function Home() {
 
     useEffect(() => {
         if (!apiService.checkToken()) {
-            navigate('/login');
+            navigate("/login");
         }
     }, []);
 
@@ -32,18 +31,18 @@ function Home() {
                     <Header/>
                 </Container>
                 <ApplicationContext>
-                    <Container style={{display: 'flex', justifyContent: 'center'}}>
+                    <Container style={{display: "flex", justifyContent: "center"}}>
                        <h4>Choose a plant: </h4>
                     </Container>
-                    <Container style={{display: 'flex', justifyContent: 'center'}}>
+                    <Container style={{display: "flex", justifyContent: "center"}}>
                         <PlantList/>
                     </Container>
 
-                    <Container style={{display: 'flex', justifyContent: 'center'}}>
+                    <Container style={{display: "flex", justifyContent: "center"}}>
                         <h4 className="bed">Plant your bed:</h4>
                     </Container>
                     <br/>
-                    <Container style={{display: 'flex', justifyContent: 'center'}}>
+                    <Container style={{display: "flex", justifyContent: "center"}}>
                         <Bed/>
                     </Container>
                 <Body/>

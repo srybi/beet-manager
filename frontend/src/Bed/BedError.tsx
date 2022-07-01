@@ -8,12 +8,12 @@ function BedError() {
     const [bedError, setBedError] = useContext(BedErrorContext)
 
     setTimeout(() => {
-        setBedError('')
+        setBedError("")
     }, 1000 * 10)
 
     return(
-        <Fade in={bedError != ''}>
-            <Alert variant='filled' severity="error" onClose={() => {setBedError('')}}>
+        <Fade in={bedError !== ""}>
+            <Alert variant="filled" severity="error" onClose={() => {setBedError("")}}>
                 {bedError}
             </Alert>
         </Fade>

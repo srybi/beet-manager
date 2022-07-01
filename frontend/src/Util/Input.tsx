@@ -1,6 +1,6 @@
-import './Input.css'
-import { TextField } from '@mui/material';
-import { ChangeEvent, ReactElement } from 'react';
+import "./Input.css"
+import { TextField } from "@mui/material";
+import { ChangeEvent, ReactElement } from "react";
 
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
     value: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
     name: string;
-    type: 'text' | 'password';
+    type: "text" | "password";
     error?: string | undefined
 };
 
@@ -17,7 +17,7 @@ type Props = {
 function Input({ label, name, value, onChange, type, error}: Props): ReactElement {
 
     return (
-        <div className={'Input'}>
+        <div className={"Input"}>
         <TextField
             label={`${label}*`}
             variant="outlined"
