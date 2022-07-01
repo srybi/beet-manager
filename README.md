@@ -182,3 +182,14 @@ Plant icons are free:
 | [Onion](https://www.svgrepo.com/svg/130759/onion)       | CC0 License    |
 
 Compost icon: third party, all rights reserved
+
+### OpenWeatherMap
+
+All data provided by OpenWeatherMap can be freely used through API with non-commercial or commercial purposes.
+
+- Current Weather
+
+- 3-hour Forecast 5 days
+
+- 60 calls/minute
+- 1,000,000 calls/month
