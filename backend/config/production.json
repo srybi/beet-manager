@@ -1,0 +1,29 @@
+{
+  "database": {
+    "host": "localhost",
+    "user": "beetmanager",
+    "password": "beetmanager",
+    "name": "beetmanager",
+    "port": 3306
+  },
+  "port": 3000,
+  "jwt": {
+    "expiresIn": "7d",
+    "ignoreExpiration": false,
+    "secretKey": "changeme"
+  },
+  "user": {
+    "name": {
+      "minimumLength": 3,
+      "maximumLength": 20
+    },
+    "password": {
+      "minimumLength": 14,
+      "maximumLength": 100
+    },
+    "email": {
+      "minimumLength": 6,
+      "maximumLength": 60
+    }
+  }
+}

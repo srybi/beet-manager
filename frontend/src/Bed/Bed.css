@@ -1,0 +1,39 @@
+.Bed {
+    position: relative;
+}
+.Bed .BedGrid {
+    display:table;
+    border-style: solid;
+    border-color: saddlebrown;
+    border-width: 10px;
+
+} 
+.Bed .BedGrid .BedGridRow { 
+    display:table-row;
+} 
+.Bed .BedGrid .BedField { 
+    display:table-cell; 
+    width: 50px;
+    height: 50px;
+    background-image: url( '../Icons/dust_texture.svg' );
+    border-color: darkolivegreen;
+} 
+
+.Bed .BedGrid .BedField[data-isempty='true']{ 
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: darkgreen;
+    color: white;
+    line-height: 45px;
+    text-align: center;
+} 
+
+.Bed .BedGrid .BedField[data-isover='true']{ 
+    display:table-cell;
+    width: 50px;
+    height: 50px;
+    background-color: saddlebrown;
+    outline: 3px solid darkolivegreen !important;
+}
+
